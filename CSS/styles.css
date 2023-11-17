@@ -1,0 +1,275 @@
+body {
+    width: 100%;
+    height: 4527px;
+    margin: 0%;
+    border: 0%;
+}
+
+header {
+    background-color: #CE3932;
+    height: 228px;
+    padding: 0%;
+}
+
+h1 {
+    margin: 0;
+    font-family: Fieldwork;
+    font-size: 120px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 91%; /* 109.2px */
+    letter-spacing: -3.64px;
+    background:#FFF;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+h2 {
+    margin: 0%;
+    padding-left: 10px;
+    color: #FFF;
+    font-family: Hakuna Sans;
+    font-size: 42.5px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 63.75px */
+    letter-spacing: -0.935px;
+}
+h3 {
+    margin: 0%;
+    padding-left: 10px;
+    color: #FFF;
+    font-family: Fieldwork;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 95.5%; /* 47.75px */
+    letter-spacing: -1.1px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0%;
+    text-align: right;
+    padding: 0%;
+}
+
+li {
+    display: inline-flex;  
+    justify-content: flex-end;
+    padding-right: 75px;
+    padding-top: 89px;
+    flex-direction: column;
+    color: #FFF;
+    font-family: Hakuna Sans;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 60px */
+    letter-spacing: -0.48px;;
+}
+
+a {
+    text-decoration: none;
+}
+
+.menu {
+    --s: 30px; /* control the size */
+    --c: rgb(255, 255, 255); /* the color */
+    
+    height: var(--s);
+    aspect-ratio: 1;
+    border: none;
+    padding-top: 0;
+    border-inline: calc(var(--s)/2) solid #0000; 
+    box-sizing: content-box;
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
+         no-repeat content-box border-box;
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
+         repeat-y content-box border-box;
+    background: 
+    var(--_g2) left  var(--_p,0px) top,
+    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
+    var(--_g2) right var(--_p,0px) top,
+    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
+    background-size: 
+        20% 80%,
+        40% 100%;
+    position: relative;
+    clip-path: inset(0 25%);
+    cursor: pointer;
+    transition: 
+    background-position .3s var(--_s,.3s), 
+    clip-path 0s var(--_s,.6s);
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    appearance:none;
+}
+.menu:before,
+.menu:after {
+    content:"";
+    position: absolute;
+    border-radius: var(--s);
+    inset: 40% 0;
+    background: var(--c);
+    transition: transform .3s calc(.3s - var(--_s,.3s));
+}
+
+.menu:checked {
+    clip-path: inset(0);
+    --_p: calc(-1*var(--s));
+    --_s: 0s;
+}
+.menu:checked:before {
+    transform: rotate(45deg);
+}
+.menu:checked:after {
+    transform: rotate(-45deg);
+}
+.menu:focus-visible {
+    clip-path: none;
+    border: none;
+    outline: 2px solid var(--c);
+    outline-offset: 5px;
+}
+
+.BGPhoto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    background-image: 
+    linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(16, 16, 16, 0.00) 73.44%, #000 100%),
+    url(../Landing\ Page\ Photo.png);
+    background-size: cover;
+    width: 100%;
+    height: 728px;
+}
+
+.BGMenu {
+    height: 1351px;
+    background-color: #F1BE44;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+}
+
+.BGCheckered {
+    background-image: url(../CheckeredBG.png);
+    height: 108px;
+    width: 100%;
+}
+
+.BGInfo {
+    height: 1840px;
+    background-color: #CE3932;
+}
+
+.BGReview {
+    height: 284px;
+    background-color: #F1BE44;
+}
+
+.BGFooter {
+    height: 96px;
+    background-color: #CE3932;
+}
+
+/*.parentGridBGPhoto {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 728px;
+    } */
+
+.gridBGPhotoTitle {
+    padding-right: 40px;
+    padding-bottom: 30px;
+    grid-area: 4 / 4 / 5 / 7; 
+}
+
+.gridOrderNowBtn {
+    grid-area: 6 / 6/ 1 / 6;
+    background-color: #F1BE44;
+    margin: 50px;
+    width: 482px;
+    height: 128px;
+    border-radius: 60px;
+}
+
+.orderBtnFont {
+    padding-left: 37.5px;
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 120px */
+    letter-spacing: -1.76px;
+}
+
+.gridBookingsBtn {
+    grid-area: 4 / 1 / 5 / 2;
+    background-color: #CE3932;
+    margin: 50px;
+    width: 418px;
+    height: 128px;
+    border-radius: 60px;
+}
+
+.bookingsBtnFont {
+    padding-left: 37.5px;
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 120px */
+    letter-spacing: -1.76px;
+}
+
+.gridOpenStatus {
+    padding-left: 37.5px;
+    grid-area: 3 / 1 / 2 / 4;
+    background-color: #1CC34B;
+    margin: 50px;
+    width: 179px;
+    height: 88px;
+    border-radius: 60px;
+}
+
+.openStatusBtnFont {
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 90px */
+    letter-spacing: -1.32px;
+}
+
+.gridMenuTitle {
+    grid-area: 2 / 1 / 2 / 2;
+}
+
+.menuFont {
+    padding-left: 80px;
+    color: #000;
+    font-family: Hakuna Sans;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 105px */
+    letter-spacing: 3.01px;
+}
+
+
+hr {
+    margin: 0px;
+    margin-left: 80px;
+    width: 314px;
+    height: 7px;
+    background-color: #000;
+    border: solid #000; 
+  }
+  
