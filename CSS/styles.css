@@ -48,6 +48,31 @@ h3 {
     letter-spacing: -1.1px;
 }
 
+h4 {
+    color: #000000;
+    font-family: Fieldwork;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 750;
+    line-height: 95.5%; /* 38.2px */
+    letter-spacing: 0px;
+    margin: 0;
+    padding: 0;
+}
+
+h5 {
+    color: #000000;
+    font-family: Fieldwork;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 105;
+    line-height: 95.5%;
+    letter-spacing: -0.66px;
+    padding: 0;
+    margin: 0;
+
+}
+
 ul {
     list-style-type: none;
     margin: 0%;
@@ -147,7 +172,7 @@ a {
 }
 
 .BGMenu {
-    height: 1351px;
+    height: 1500px;
     background-color: #F1BE44;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -174,13 +199,6 @@ a {
     height: 96px;
     background-color: #CE3932;
 }
-
-/*.parentGridBGPhoto {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
-    height: 728px;
-    } */
 
 .gridBGPhotoTitle {
     padding-right: 40px;
@@ -249,11 +267,12 @@ a {
 }
 
 .gridMenuTitle {
-    grid-area: 2 / 1 / 2 / 2;
+    grid-area: 1 / 1 / 2 / 2;
 }
 
-.menuFont {
+.menuFontTitle {
     padding-left: 80px;
+    padding-top: 100px;
     color: #000;
     font-family: Hakuna Sans;
     font-size: 70px;
@@ -263,7 +282,6 @@ a {
     letter-spacing: 3.01px;
 }
 
-
 hr {
     margin: 0px;
     margin-left: 80px;
@@ -271,5 +289,39 @@ hr {
     height: 7px;
     background-color: #000;
     border: solid #000; 
-  }
+}
   
+.menuList {
+    margin-top: 1%;
+    grid-area: 2 / 1 / 7 / 3;
+}
+
+button {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
+    border: 0.12px solid;
+    margin: 1% 5% 1% 5.5%;
+    padding: 2.5% 2.5% 2.5% 2.5%;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 27px;
+    background: linear-gradient(145deg, #ffcb49, #ebb538);
+    box-shadow:  11px 11px 22px #d6a93d,
+                -11px -11px 22px #ffd34b;
+}
+
+.menuPhoto {
+    grid-area: 1 / 3 / 4 / 5;
+    margin: 20% 0% 10% 10%;
+    background-size: cover;
+    width: 650px;
+    height: 595px;
+    flex-shrink: 0;
+    border-radius: 43px;
+    background: url("../Menu-Photo.png"), lightgray 50% / cover no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
