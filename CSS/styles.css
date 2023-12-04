@@ -7,8 +7,9 @@ body {
 
 header {
     background-color: #CE3932;
-    height: 228px;
+    height: 158px;
     padding: 0%;
+    
 }
 
 h1 {
@@ -84,7 +85,7 @@ li {
     display: inline-flex;  
     justify-content: flex-end;
     padding-right: 75px;
-    padding-top: 89px;
+    padding-top: 55px;
     flex-direction: column;
     color: #FFF;
     font-family: Hakuna Sans;
@@ -95,69 +96,89 @@ li {
     letter-spacing: -0.48px;;
 }
 
+
 a {
     text-decoration: none;
 }
 
-.menu {
-    --s: 30px; /* control the size */
-    --c: rgb(255, 255, 255); /* the color */
-    
-    height: var(--s);
-    aspect-ratio: 1;
-    border: none;
-    padding-top: 0;
-    border-inline: calc(var(--s)/2) solid #0000; 
-    box-sizing: content-box;
-    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) 
-         no-repeat content-box border-box;
-    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) 
-         repeat-y content-box border-box;
-    background: 
-    var(--_g2) left  var(--_p,0px) top,
-    var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top,
-    var(--_g2) right var(--_p,0px) top,
-    var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top;
-    background-size: 
-        20% 80%,
-        40% 100%;
-    position: relative;
-    clip-path: inset(0 25%);
-    cursor: pointer;
-    transition: 
-    background-position .3s var(--_s,.3s), 
-    clip-path 0s var(--_s,.6s);
-    -webkit-appearance:none;
-    -moz-appearance:none;
-    appearance:none;
-}
-.menu:before,
-.menu:after {
-    content:"";
-    position: absolute;
-    border-radius: var(--s);
-    inset: 40% 0;
-    background: var(--c);
-    transition: transform .3s calc(.3s - var(--_s,.3s));
+.hamburger1 {
+  height: 35px;
+  margin: 0px;
+  justify-items: center;
+  z-index: 120;
 }
 
-.menu:checked {
-    clip-path: inset(0);
-    --_p: calc(-1*var(--s));
-    --_s: 0s;
+.hamburger1 div {
+  background-color: rgb(61, 61, 61);
+  position: relative;
+  width: 40px;
+  height: 5px;
+  margin-top: 7px;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
-.menu:checked:before {
-    transform: rotate(45deg);
+
+.toggle1 {
+  display: none;
 }
-.menu:checked:after {
-    transform: rotate(-45deg);
+
+.toggle1:checked + .hamburger1 .top {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  margin-top: 22.5px;
 }
-.menu:focus-visible {
-    clip-path: none;
-    border: none;
-    outline: 2px solid var(--c);
-    outline-offset: 5px;
+
+.toggle1:checked + .hamburger1 .meat {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  margin-top: -5px;
 }
+
+.toggle1:checked + .hamburger1 .bottom {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.toggle1:checked ~ .menu1 {
+  height: 340px;
+}
+
+.menuDropdown {
+    display: flex;
+    box-shadow: var(--shadow);
+    border-radius: var(--radius);
+    background: white;
+    opacity: 0;
+    width: 250px;
+    margin-top: 1.2rem;
+    visibility: hidden;
+    transform: translateY(0.5rem);
+    transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+}
+
+.menuDropdownContent {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0;
+    top: 100%;
+    right: 0;
+}
+
+.menuDropdownContent a {
+    display: flex;
+    align-items: center;
+    column-gap: var(--gap);
+    padding: 0.8rem 1rem;
+    text-decoration: none;
+    color: black;
+}
+
+.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0rem);
+  }
 
 .BGPhoto {
     display: grid;
@@ -168,11 +189,11 @@ a {
     url(../Landing\ Page\ Photo.png);
     background-size: cover;
     width: 100%;
-    height: 728px;
+    height: 800px;
 }
 
 .BGMenu {
-    height: 1500px;
+    height: 1300px;
     background-color: #F1BE44;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -301,9 +322,9 @@ button {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    width: 100%;
+    width: 90%;
     border: 0.12px solid;
-    margin: 1% 5% 1% 5.5%;
+    margin: 1% 5% 1.5% 7.5%;
     padding: 2.5% 2.5% 2.5% 2.5%;
     cursor: pointer;
     outline: inherit;
@@ -315,13 +336,56 @@ button {
 
 .menuPhoto {
     grid-area: 1 / 3 / 4 / 5;
-    margin: 20% 0% 10% 10%;
+    margin: 7.5% 0% 0% 7.5%;
     background-size: cover;
-    width: 650px;
-    height: 595px;
+    width: 80%;
+    height: 75%;
     flex-shrink: 0;
     border-radius: 43px;
-    background: url("../Menu-Photo.png"), lightgray 50% / cover no-repeat;
-    background-size: cover;
+    border: solid white 7.5px;
+    background: url("../Menu-Photo.png"), rgb(255, 255, 255) 50% / cover no-repeat;
     background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.gridMenuTitleTwo {
+    margin: 10%;
+    grid-area: 3 / 3 / 7 / 5;
+}
+
+.gridMenuTitleTwo hr {
+    margin-left: 10px;
+}
+
+.menuFontTitleTwo {
+    padding-top: 50px;
+    color: #000;
+    font-family: Hakuna Sans;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 105px */
+    letter-spacing: 3.01px;
+}
+
+.menuListDrinks {
+    margin-top: 7%;
+    grid-area: 4 / 3 / 7 / 5;
+}
+
+.menuListDrinks button {
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 60%;
+    border: 0.12px solid;
+    margin: 1% 5% 1.5% 10%;
+    padding: 2.5% 2.5% 2.5% 2.5%;
+    cursor: pointer;
+    outline: inherit;
+    border-radius: 27px;
+    background: linear-gradient(145deg, #ffcb49, #ebb538);
+    box-shadow:  11px 11px 22px #d6a93d,
+                -11px -11px 22px #ffd34b;
 }

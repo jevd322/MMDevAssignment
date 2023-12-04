@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../CSS/styles.css">
-    <link rel="stylesheet" href="https://use.typekit.net/ojw4bov.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 viewport-fit=cover" />
+    <meta name="description"
+        content="John Henry's Pizza is a Cork based pizzeria focused on delivering the finest pizzas Cork will ever get" />
+    <link rel="stylesheet" href="../CSS/styles.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/ojw4bov.css" />
     <title>John Henry's Pizza</title>
 </head>
 
@@ -12,10 +15,23 @@
     <header class="header">
         <ul>
             <li>Contact Us</li>
-            <li>Menu</li>
-            <li>
-                <input type="checkbox" role="button" aria-label="Display the menu" class="menu">
+            <li><a href="#menuLink">Menu</a></li>
+            <li style="padding-right: 0px;">
+                <input type="checkbox" role="button" aria-label="Display the menu" class="toggle1" id="menuBtn"/>
+                <label class="hamburger1" for="menuBtn">
+                    <div class="top"></div>
+                    <div class="meat"></div>
+                    <div class="bottom"></div>
+                  </label>
+                <div class="menuDropdown" id="menuDropdown">
+                    <div class="menuDropdownContent" id="menuDropdownContent">
+                        <a href="#menuLink">Menu</a>
+                        <a href="#menuLink">Menu</a>
+                        <a href="#menuLink">Menu</a>
+                    </div>
+                </div>
             </li>
+
         </ul>
     </header>
     <div>
@@ -26,7 +42,7 @@
                 <h2>Sullivan's Quay, Cork City, T12 8X62</h2>
             </div>
             <div class="gridOrderNowBtn">
-                <a href="Order Page.html" class="orderBtnFont">ORDER NOW</a>
+                <a href="#menuLink" class="orderBtnFont">ORDER NOW</a>
             </div>
             <div class="gridBookingsBtn">
                 <a href="Bookings.html" class="bookingsBtnFont">BOOKINGS</a>
@@ -36,9 +52,10 @@
             </div>
         </div>
         <div class="BGMenu">
+            <a id="menuLink"></a>
             <div class="gridMenuTitle">
                 <h2 class="menuFontTitle">PIZZA</h2>
-                <hr>
+                <hr />
             </div>
             <div class="menuList">
                 <button>
@@ -62,7 +79,10 @@
                 <button>
                     <div>
                         <h4>The Rooster</h4>
-                        <h5>Mozarella, Wood Roasted Chicken, Cajun Spice, Spanish Chorizo & Jalapeno</h5>
+                        <h5>
+                            Mozarella, Wood Roasted Chicken, Cajun Spice, Spanish Chorizo &
+                            Jalapeno
+                        </h5>
                     </div>
                     <div>
                         <h4>13.25</h4>
@@ -80,7 +100,10 @@
                 <button>
                     <div>
                         <h4>Falafel Heaven</h4>
-                        <h5>(Roasted Tomato Base)Falafel, Broccoli, Red Onion, Peppers, Rocket</h5>
+                        <h5>
+                            (Roasted Tomato Base)Falafel, Broccoli, Red Onion, Peppers,
+                            Rocket
+                        </h5>
                     </div>
                     <div>
                         <h4>13.25</h4>
@@ -98,7 +121,10 @@
                 <button>
                     <div>
                         <h4>Diablo</h4>
-                        <h5>Mozarella, Spicy Chorizo, Jalapeno, Red Chilli, Peppers, Rocket & Pesto</h5>
+                        <h5>
+                            Mozarella, Spicy Chorizo, Jalapeno, Red Chilli, Peppers, Rocket
+                            & Pesto
+                        </h5>
                     </div>
                     <div>
                         <h4>13.25</h4>
@@ -107,7 +133,10 @@
                 <button>
                     <div>
                         <h4>The Holy Cow</h4>
-                        <h5>Mozarella, Slow Cooked Beef Brisket, Red Onion Chutney & Parmesan</h5>
+                        <h5>
+                            Mozarella, Slow Cooked Beef Brisket, Red Onion Chutney &
+                            Parmesan
+                        </h5>
                     </div>
                     <div>
                         <h4>13.25</h4>
@@ -116,7 +145,10 @@
                 <button>
                     <div>
                         <h4>The Wild West</h4>
-                        <h5>Mozarella, Spanish Chorizo, Clonakilty Black Pudding, Red Onion Chutney & Rocket</h5>
+                        <h5>
+                            Mozarella, Spanish Chorizo, Clonakilty Black Pudding, Red Onion
+                            Chutney & Rocket
+                        </h5>
                     </div>
                     <div>
                         <h4>13.25</h4>
@@ -124,6 +156,52 @@
                 </button>
             </div>
             <div class="menuPhoto"></div>
+            <div class="gridMenuTitleTwo">
+                <h2 class="menuFontTitleTwo">DRINKS</h2>
+                <hr />
+            </div>
+            <div class="menuListDrinks">
+                <button>
+                    <div>
+                        <h4>The Wild West</h4>
+                    </div>
+                    <div>
+                        <h4>13.25</h4>
+                    </div>
+                </button>
+                <button>
+                    <div>
+                        <h4>The Wild West</h4>
+                    </div>
+                    <div>
+                        <h4>13.25</h4>
+                    </div>
+                </button>
+                <button>
+                    <div>
+                        <h4>The Wild West</h4>
+                    </div>
+                    <div>
+                        <h4>13.25</h4>
+                    </div>
+                </button>
+                <button>
+                    <div>
+                        <h4>The Wild West</h4>
+                    </div>
+                    <div>
+                        <h4>13.25</h4>
+                    </div>
+                </button>
+                <button>
+                    <div>
+                        <h4>The Wild West</h4>
+                    </div>
+                    <div>
+                        <h4>13.25</h4>
+                    </div>
+                </button>
+            </div>
         </div>
         <div class="BGCheckered"></div>
         <div class="BGInfo"></div>
@@ -131,4 +209,7 @@
         <div class="BGFooter"></div>
     </div>
 </body>
+
+<script src="../JS/script.js"></script>
+
 </html>
