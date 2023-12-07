@@ -15,27 +15,30 @@
     <header class="header">
         <ul>
             <li>Contact Us</li>
-            <li><a href="#menuLink">Menu</a></li>
             <li style="padding-right: 0px;">
-                <input type="checkbox" role="button" aria-label="Display the menu" class="toggle1" id="menuBtn"/>
-                <label class="hamburger1" for="menuBtn">
-                    <div class="top"></div>
-                    <div class="meat"></div>
-                    <div class="bottom"></div>
-                  </label>
+                <a href="#menuLink">Menu</a>
+            </li>
+            <li style="direction: rtl; padding-right: 0px; ">
+                <div>
+                    <input type="checkbox" role="button" aria-label="Display the menu" class="toggle1" id="menuBtn"/>
+                    <label class="hamburger1" for="menuBtn">
+                        <div class="top"></div>
+                        <div class="meat"></div>
+                        <div class="bottom"></div>
+                    </label>
+                </div>
                 <div class="menuDropdown" id="menuDropdown">
                     <div class="menuDropdownContent" id="menuDropdownContent">
                         <a href="#menuLink">Menu</a>
-                        <a href="#menuLink">Menu</a>
-                        <a href="#menuLink">Menu</a>
+                        <a href="#menuLink">About</a>
+                        <a href="#menuLink">Contact</a>
                     </div>
                 </div>
             </li>
-
         </ul>
     </header>
     <div>
-        <div class="BGPhoto">
+        <section class="BGPhoto">
             <div class="gridBGPhotoTitle">
                 <h3>SERVING QUALITY PIZZA</h3>
                 <h1>CORK'S FINEST</h1>
@@ -50,14 +53,31 @@
             <div class="gridOpenStatus">
                 <a href="Open Status.html" class="openStatusBtnFont">OPEN</a>
             </div>
-        </div>
-        <div class="BGMenu">
+        </section>
+        <section class="BGMenu">
             <a id="menuLink"></a>
+            <div id="orderModal" class="modal">
+                <div class="modal-content">
+                    <div class="modal-content-header"></div>
+                    <span class="close" id="closeModal">&times;</span>
+                    <h2 class="modalh2">Orders</h2>
+                    <section id="cart" class="modal-cart">
+                        <!-- Display selected items and total price here -->
+                        <button class="remove-item" id="removeOrder">&times;</button>
+                    </section>
+                    <button onclick="placeOrder();" class="modal-content-button">Place Order</button>
+                </div>
+            </div>
             <div class="gridMenuTitle">
                 <h2 class="menuFontTitle">PIZZA</h2>
-                <hr />
+                <hr>
             </div>
-            <div class="menuList">
+            <div class="gridMenuCartBtn">
+                <button id="orderBtn" class="cartButton"></button>
+                <hr>
+            </div>
+            <div class="menuList" id="menuList">
+                <!--
                 <button>
                     <div>
                         <h4>Margherita Pizza</h4>
@@ -134,8 +154,7 @@
                     <div>
                         <h4>The Holy Cow</h4>
                         <h5>
-                            Mozarella, Slow Cooked Beef Brisket, Red Onion Chutney &
-                            Parmesan
+                            Mozarella, Slow Cooked Beef Brisket, Red Onion Chutney & Parmesan
                         </h5>
                     </div>
                     <div>
@@ -154,14 +173,15 @@
                         <h4>13.25</h4>
                     </div>
                 </button>
+            -->
             </div>
             <div class="menuPhoto"></div>
             <div class="gridMenuTitleTwo">
                 <h2 class="menuFontTitleTwo">DRINKS</h2>
-                <hr />
+                <hr/>
             </div>
-            <div class="menuListDrinks">
-                <button>
+            <div class="menuListDrinks" id="menuListDrinks">
+            <!--   <button>
                     <div>
                         <h4>The Wild West</h4>
                     </div>
@@ -201,12 +221,15 @@
                         <h4>13.25</h4>
                     </div>
                 </button>
+                --> 
             </div>
-        </div>
-        <div class="BGCheckered"></div>
-        <div class="BGInfo"></div>
-        <div class="BGReview"></div>
-        <div class="BGFooter"></div>
+        </section>
+        <section class="BGCheckered"></section>
+        <section class="BGInfo">
+            <div id="cart"></div>
+        </section>
+        <section class="BGReview"></section>
+        <section class="BGFooter"></section>
     </div>
 </body>
 
