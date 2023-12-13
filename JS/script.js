@@ -71,11 +71,11 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
 
     const drinksMenu = [
-        { drinkName: "Barry's Tea", drinkPrice: 3.00},
-        { drinkName: "Barry's Tea", drinkPrice: 3.00},
-        { drinkName: "Barry's Tea", drinkPrice: 3.00},
-        { drinkName: "Barry's Tea", drinkPrice: 3.00},
-        { drinkName: "Barry's Tea", drinkPrice: 3.00},
+        { drinkName: "Barry's Tea", drinkPrice: 2.75},
+        { drinkName: "Tanora", drinkPrice: 3.00},
+        { drinkName: "Red Lemonade", drinkPrice: 3.00},
+        { drinkName: "Cidona", drinkPrice: 3.00},
+        { drinkName: "Beamish", drinkPrice: 5.50},
     ];
 
     pizzaMenu.forEach(item => {

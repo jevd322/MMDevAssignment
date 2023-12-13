@@ -74,6 +74,7 @@ h5 {
 }
 
 ul {
+    float: right;
     list-style-type: none;
     margin: 0%;
     text-align: right;
@@ -176,7 +177,18 @@ margin-right: 40%;
     transform: translateY(0rem);
   }
 
+.logoPlacement {
+    display: inline-block;
+    background-image: url(../Logo\ 1.png);
+    width: 717px;
+    height: 325px;
+    background-repeat: no-repeat;
+    z-index: 1;
+    padding-bottom: 50px;
+}
+
 .BGPhoto {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
@@ -184,11 +196,12 @@ margin-right: 40%;
     linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(16, 16, 16, 0.00) 73.44%, #000 100%),
     url(../Landing\ Page\ Photo.png);
     background-size: cover;
-    width: 100%;
-    height: 800px;
+    background-repeat: no-repeat;
+    min-height: 800px;
 }
 
 .BGMenu {
+    width: 100%;
     height: 1300px;
     background-color: #F1BE44;
     display: grid;
@@ -205,6 +218,11 @@ margin-right: 40%;
 .BGInfo {
     height: 1840px;
     background-color: #CE3932;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
 }
 
 .BGReview {
@@ -267,7 +285,7 @@ margin-right: 40%;
     padding-left: 37.5px;
     grid-area: 3 / 1 / 2 / 4;
     background-color: #1CC34B;
-    margin: 50px;
+    margin: 0 50px;
     width: 179px;
     height: 88px;
     border-radius: 60px;
@@ -452,7 +470,6 @@ button {
 
 .modal-content-button {
     grid-area: 6 / 4 / 5 / 5;
-    background-color: #F1BE44;
     margin: 50px;
     padding-left: 7.5%;
     padding-top: 2.5%;
@@ -501,7 +518,6 @@ button {
     display: flex;
     justify-content: space-between;
     align-content: baseline;
-    
 }
 
 .remove-item {
@@ -534,4 +550,709 @@ button {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+.infoTitle {
+    margin: auto;
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 150px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 114.5%; /* 171.75px */
+    letter-spacing: 6.45px;
+    grid-area: 1 / 2 / 2 / 4;
+}
+
+.infoImage {
+    background-image: url(/StudentSpecial.png);
+    grid-area: 2 / 1 / 4 / 3;
+    margin-left: 15%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 41px;
+    border: 13px solid #F1BE44;
+    width: 504px;
+    height: 504px;
+}
+
+.infoTextTitle {
+    grid-area: 2 / 2 / 4 / 5;
+    margin-left: 20%;
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 112.5px */
+    letter-spacing: 3.225px;
+}
+
+.infoTextTitle p {
+    color: #FFF;
+    margin-right: 15%;
+    font-family: Hakuna Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 37.5px */
+    letter-spacing: 1.075px;
+}
+
+.infoTextTitleTwo {
+    grid-area: 4 / 1 / 6 / 3;
+    margin-left: 15%;
+    color: #FFF;
+    font-family: Fries and Shakes Font;
+    font-size: 75px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 112.5px */
+    letter-spacing: 3.225px;
+}
+
+.infoTextTitleTwo p {
+    color: #FFF;
+    font-family: Hakuna Sans;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 150%; /* 37.5px */
+    letter-spacing: 1.075px;
+}
+
+.infoImageTwo {
+    grid-area: 4 / 3 / 6 / 5;
+    background-image: url(/1d15b71c542a5279f46bfb6bca0d3b32.jpg);
+    margin-left: 15%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    width: 528px;
+    height: 623px;
+}
+
+@media (max-width: 500px) {
+    body {
+        width: 100%;
+        height: 3327px;
+        margin: 0%;
+        border: 0%;
+    }
+    
+    header {
+        background-color: #CE3932;
+        height: 98px;
+        padding: 0%;
+    }
+    
+    h1 {
+        margin: 0;
+        padding-left: 7.5px;
+        font-family: Fieldwork;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 91%; /* 109.2px */
+        letter-spacing: -3.64px;
+        background:#FFF;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;   
+    }
+    
+    h2 {
+        margin: 0%;
+        padding-left: 10px;
+        color: #FFF;
+        font-family: Hakuna Sans;
+        font-size: 17.5px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 63.75px */
+        letter-spacing: -0.935px;
+    }
+    h3 {
+        display: none;
+        margin: 0%;
+        padding-left: 10px;
+        color: #FFF;
+        font-family: Fieldwork;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 95.5%; /* 47.75px */
+        letter-spacing: -1.1px;
+    }
+    
+    h4 {
+        color: #000000;
+        font-family: Fieldwork;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 750;
+        line-height: 95.5%; /* 38.2px */
+        letter-spacing: 0px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    h5 {
+        color: #000000;
+        font-family: Fieldwork;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 105;
+        line-height: 95.5%;
+        letter-spacing: -0.66px;
+        padding: 0;
+        margin: 0;
+    
+    }
+    
+    ul {
+        list-style-type: none;
+        margin: 0%;
+        text-align: right;
+        padding: 0%;
+        height: 98px;
+    }
+    
+    li {
+        display: none;  
+        justify-content: flex-end;
+        padding-right: 0;
+        padding-top: 30px;
+        flex-direction: column;
+        color: #FFF;
+        font-family: Hakuna Sans;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 60px */
+        letter-spacing: -0.48px;;
+    }
+    
+    .mqRemove {
+        display: none;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .hamburger1 {
+      height: 40px;
+      width: 45px;
+      margin: 0px;
+      justify-items: center;
+      z-index: 120;
+    }
+    
+    .hamburger1 div {
+      margin-right: 10%;
+      background-color: rgb(61, 61, 61);
+      position: relative;
+      width: 40px;
+      height: 6px;
+      margin-top: 7px;
+      -webkit-transition: all 0.2s ease-in-out;
+      transition: all 0.2s ease-in-out;
+    }
+    
+    .toggle1 {
+      display: none;
+    }
+    
+    .toggle1:checked + .hamburger1 .top {
+      -webkit-transform: rotate(-45deg);
+              transform: rotate(-45deg);
+      margin-top: 22.5px;
+    }
+    
+    .toggle1:checked + .hamburger1 .meat {
+      -webkit-transform: rotate(45deg);
+              transform: rotate(45deg);
+      margin-top: -5px;
+    }
+    
+    .toggle1:checked + .hamburger1 .bottom {
+      -webkit-transform: scale(0);
+              transform: scale(0);
+    }
+    
+    .toggle1:checked ~ .menu1 {
+      min-height: 340px;
+    }
+    
+    .menuDropdown {
+        box-shadow: var(--shadow);
+        border-radius: var(--radius);
+        background: white;
+        opacity: 0;
+        width: 100%;
+        margin-top: 1.6rem;
+        visibility: hidden;
+        transform: translateY(0.5rem);
+        transition: all 0.1s cubic-bezier(0.16, 1, 0.5, 1);
+    }
+    
+    .menuDropdownContent {
+        direction: ltr;
+    }
+    
+    .menuDropdownContent a {
+        display: flex;
+        align-items: center;
+        column-gap: var(--gap);
+        padding: 0.8rem 1rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    .mediaQueryDropdown {
+        display: block;
+        margin-top: 0;
+    }
+    
+    .show {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0rem);
+      }
+    
+    .BGPhoto {
+        width: 100%;
+        display: grid;
+        object-fit: contain;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        background-image: 
+        linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(16, 16, 16, 0.00) 73.44%, #000 100%),
+        url(../Landing\ Page\ Photo.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        min-height: 800px;
+    }
+
+    .logoPlacement {
+        display: inline-block;
+        background-image: url(../Logo\ 1.png);
+        width: 252px;
+        height: 75px;
+        background-repeat: no-repeat;
+        background-size: contain;
+        z-index: 1;
+    }
+    
+    .BGMenu {
+        width: 100%;
+        height: 1100px;
+        background-color: #F1BE44;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(11, 1fr);
+    }
+    
+    .BGCheckered {
+        background-image: url(../CheckeredBG.png);
+        background-size: contain;
+        height: 28px;
+        width: 100%;
+    }
+    
+    .BGInfo {
+        height: 900px;
+        background-color: #CE3932;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    
+    .BGReview {
+        height: 284px;
+        background-color: #F1BE44;
+    }
+    
+    .BGFooter {
+        height: 96px;
+        background-color: #CE3932;
+    }
+    
+    .gridBGPhotoTitle {
+        padding: 0;
+        margin: 15% 10%;
+        grid-area: 1 / 1 / 2 / 5; 
+    }
+    
+    .gridOrderNowBtn {
+        grid-area: 2 / 2 / 3 / 2;
+        background-color: #F1BE44;
+        margin: 0 auto;
+        width: 240px;
+        height: 88px;
+        border-radius: 60px;
+    }
+    
+    .orderBtnFont {
+        padding-left: 22.5px;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 210%;
+        letter-spacing: -1.76px;
+    }
+    
+    .gridBookingsBtn {
+        grid-area: 3 / 2 / 3 / 2;
+        background-color: #CE3932;
+        margin: 0 auto;
+        width: 240px;
+        height: 88px;
+        border-radius: 60px;
+    }
+    
+    .bookingsBtnFont {
+        padding-left: 37.5px;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%; /* 120px */
+        letter-spacing: -1.76px;
+    }
+    
+    .gridOpenStatus {
+        padding-left: 52.5px;
+        grid-area: 2 / 2 / 3 / 2;
+        background-color: #1CC34B;
+        margin-top: 29%;
+        width: 188px;
+        height: 88px;
+        border-radius: 60px;
+    }
+    
+    .openStatusBtnFont {
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 145%; /* 90px */
+        letter-spacing: -1.32px;
+    }
+    
+    .gridMenuTitle {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    
+    .menuFontTitle {
+        padding: 0;
+        padding-top: 10%;
+        padding-left: 15%;
+        color: #000;
+        font-family: Hakuna Sans;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 105px */
+        letter-spacing: 3.01px;
+    }
+    
+    .gridMenuCartBtn {
+        display: flex;
+        padding: 30% 30% 0 0;
+        grid-area: 1 / 3 / 1 / 4;
+    }
+    
+    #menuLink {
+        grid-area: 1 / 1 / 1 / 1;
+    }
+    
+    .gridMenuCartBtn hr {
+        width: 58px;
+        height: 1px;
+        margin: 7.5% 5%;
+    }
+    
+    .cartButton {
+        width: 50px;
+        height: 52px;
+        margin: 0 10%;
+        cursor: pointer;
+        outline: inherit;
+        border: none;
+        background: none;
+        box-shadow: none;
+        background-image: url(../cart-regular-108\ 1.png);
+        background-size: contain;
+    }
+    
+    hr {
+        margin: 0px;
+        margin-left: 15%;
+        width: 150px;
+        height: 1.5px;
+        background-color: #000;
+        border: solid #000; 
+    }
+      
+    .menuList {
+        margin: 2.5% 10% 2% 10%;
+        grid-area: 2 / 1 / 3 / 4;
+    }
+    
+    button {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        border: 0.12px solid;
+        border-color: #cf9305;
+        margin: 2.5% auto;
+        padding: 3% 3%;
+        cursor: pointer;
+        outline: inherit;
+        border-radius: 15px;
+        background: linear-gradient(145deg, #ffcb49, #ebb538);
+        box-shadow:  11px 11px 22px #d6a93d,
+                    -11px -11px 22px #ffd34b;
+    }
+    
+    .menuPhoto {
+        display: none;
+    }
+    
+    .gridMenuTitleTwo {
+        margin: 2% auto;
+        grid-area: 3 / 1 / 3 / 1;
+    }
+    
+    .gridMenuTitleTwo hr {
+        margin-left: 38px;
+        width: 200px;
+    }
+    
+    .menuFontTitleTwo {
+        padding: 0;
+        padding-top: 0%;
+        padding-left: 15%;
+        color: #000;
+        font-family: Hakuna Sans;
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 105px */
+        letter-spacing: 3.01px;
+    }
+    
+    .menuListDrinks {
+        margin: 2.5% 10% 10% 10%;
+        grid-area: 4 / 1 / 4 / 4;
+    }
+    
+    .menuListDrinks button {
+        text-align: left;
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        width: 100%;
+        border: 0.12px solid;
+        border-color: #cf9305;
+        margin: 2.5% auto;
+        padding: 3% 3%;
+        cursor: pointer;
+        outline: inherit;
+        border-radius: 15px;
+        background: linear-gradient(145deg, #ffcb49, #ebb538);
+        box-shadow:  11px 11px 22px #d6a93d,
+                    -11px -11px 22px #ffd34b;
+    }
+    
+    .modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,0.7);
+    }
+    
+    .modal-content {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+        background: #E9E5E5;
+        margin: 30% 10% 20% 10%;
+        border: 1px solid #888;
+        width: 80%;
+        height: 70%;
+    }
+    
+    .modal-content-header {
+        grid-area: 1 / 1 / 2 / 6;
+        width: 100%;
+        height: 100%;
+        flex-shrink: 0;
+        background: #CE3932;
+        box-shadow: 0px 4px 15px 11px rgba(0, 0, 0, 0.25);
+    }
+    
+    .modal-content-button {
+        grid-area: 6 / 4 / 5 / 5;
+        margin: 50px;
+        padding-left: 7.5%;
+        padding-top: 2.5%;
+        width: 175px;
+        height: 45px;
+        border-radius: 60px;
+        margin: 0;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 90px */
+        letter-spacing: -1.32px;
+        cursor: pointer;
+        outline: inherit;
+        border: none;
+        box-shadow: none;
+    }
+    
+    .modalh2 {
+        display: inline-flex;
+        padding: 20% 0 0 20%;
+        grid-area: 2 / 1 / 3 / 3;
+        color: #000;
+        font-size: 40px;
+    }
+    
+    .modal-content p {
+        grid-area: 3 / 1 / 3 / 3;
+        margin: auto;
+        color: #000;
+        font-family: Fieldwork;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 95.5%; /* 47.75px */
+        letter-spacing: -1.1px;
+        padding-left: 0;
+    }
+    
+    .modal-cart {
+        grid-area: 3 / 1 / 4 / 6;
+    }
+    
+    .cartItem {
+        display: flex;
+        justify-content: space-between;
+        align-content: baseline;
+    }
+    
+    .remove-item {
+        background-color: none;
+        background: none;
+        color: #000000;
+        border: none;
+        margin: auto;
+        font-size: 25px;
+        padding: 5px;
+        cursor: pointer;
+        outline: inherit;
+        width: 10%;
+        box-shadow: none;
+    }
+    
+    .close {
+        grid-area: 1 / 1 / 2 / 6;
+        padding-left: 10px;
+        color: #dfbf2f;
+        float: right;
+        font-size: 50px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    
+    .close:hover,
+    .close:focus {
+        color: black;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .infoTitle {
+        margin: auto;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 60px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 114.5%; /* 171.75px */
+        letter-spacing: 6.45px;
+        grid-area: 1 / 1 / 2 / 4;
+    }
+    
+    .infoImage {
+        display: none;
+    }
+    
+    .infoTextTitle {
+        grid-area: 2 / 1 / 4 / 4;
+        margin: 5% 5% 5% 5%;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 112.5px */
+        letter-spacing: 3.225px;
+    }
+    
+    .infoTextTitle p {
+        color: #FFF;
+        margin-right: 15%;
+        font-family: Hakuna Sans;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 37.5px */
+        letter-spacing: 1.075px;
+    }
+    
+    .infoTextTitleTwo {
+        grid-area: 4 / 1 / 6 / 4;
+        margin: 5% 10% 5% 5%;
+        color: #FFF;
+        font-family: Fries and Shakes Font;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%; /* 112.5px */
+        letter-spacing: 3.225px;
+    }
+    
+    .infoTextTitleTwo p {
+        color: #FFF;
+        font-family: Hakuna Sans;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 150%; /* 37.5px */
+        letter-spacing: 1.075px;
+    }
+    
+    .infoImageTwo {
+        display: none;
+    }
 }
