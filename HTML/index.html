@@ -8,6 +8,7 @@
         content="John Henry's Pizza is a Cork based pizzeria focused on delivering the finest pizzas Cork will ever get" />
     <link rel="stylesheet" href="../CSS/styles.css" />
     <link rel="stylesheet" href="https://use.typekit.net/ojw4bov.css" />
+    <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <title>John Henry's Pizza</title>
 </head>
 
@@ -20,7 +21,7 @@
             </li>
             <li class="mediaQueryDropdown" style="direction: rtl; padding-right: 0px;">
                 <div>
-                    <input type="checkbox" role="button" aria-label="Display the menu" class="toggle1" id="menuBtn"/>
+                    <input type="checkbox" role="button" aria-label="Display the menu" class="toggle1" id="menuBtn" />
                     <label class="hamburger1" for="menuBtn">
                         <div class="top"></div>
                         <div class="meat"></div>
@@ -38,75 +39,87 @@
         </ul>
         <section class="logoPlacement"></section>
     </header>
-        <section class="BGPhoto">
-            <div class="gridBGPhotoTitle">
-                <h3>SERVING QUALITY PIZZA</h3>
-                <h1>CORK'S FINEST</h1>
-                <h2>Sullivan's Quay, Cork City, T12 8X62</h2>
+    <section class="BGPhoto">
+        <div class="gridBGPhotoTitle">
+            <h3>SERVING QUALITY PIZZA</h3>
+            <h1>CORK'S FINEST</h1>
+            <h2>Sullivan's Quay, Cork City, T12 8X62</h2>
+        </div>
+        <div class="gridOrderNowBtn">
+            <a href="#menuLink" class="orderBtnFont">ORDER NOW</a>
+        </div>
+        <div class="gridBookingsBtn">
+            <a href="Bookings.html" class="bookingsBtnFont">BOOKINGS</a>
+        </div>
+        <div class="gridOpenStatus">
+            <div class="openStatusBG">
+                <a href="Open Status.html" class="openStatusBtnFont">EXPECTED WAIT TIME 35 MINS</a>
             </div>
-            <div class="gridOrderNowBtn">
-                <a href="#menuLink" class="orderBtnFont">ORDER NOW</a>
+        </div>
+    </section>
+    <section class="BGMenu">
+        <a id="menuLink"></a>
+        <div id="orderModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-content-header"></div>
+                <span class="close" id="closeModal">&times;</span>
+                <h2 class="modalh2">Orders</h2>
+                <section id="cart" class="modal-cart">
+                    <!-- Display selected items and total price here -->
+                    <button class="remove-item" id="removeOrder">&times;</button>
+                </section>
+                <button onclick="placeOrder();" class="modal-content-button">Place Order</button>
             </div>
-            <div class="gridBookingsBtn">
-                <a href="Bookings.html" class="bookingsBtnFont">BOOKINGS</a>
-            </div>
-            <div class="gridOpenStatus">
-                <a href="Open Status.html" class="openStatusBtnFont">OPEN</a>
-            </div>
-        </section>
-        <section class="BGMenu">
-            <a id="menuLink"></a>
-            <div id="orderModal" class="modal">
-                <div class="modal-content">
-                    <div class="modal-content-header"></div>
-                    <span class="close" id="closeModal">&times;</span>
-                    <h2 class="modalh2">Orders</h2>
-                    <section id="cart" class="modal-cart">
-                        <!-- Display selected items and total price here -->
-                        <button class="remove-item" id="removeOrder">&times;</button>
-                    </section>
-                    <button onclick="placeOrder();" class="modal-content-button">Place Order</button>
-                </div>
-            </div>
-            <div class="gridMenuTitle">
-                <h2 class="menuFontTitle">PIZZA</h2>
-                <hr>
-            </div>
-            <div class="gridMenuCartBtn">
-                <button id="orderBtn" class="cartButton"></button>
-                <hr>
-            </div>
-            <div class="menuList" id="menuList">
-            </div>
-            <div class="menuPhoto"></div>
-            <div class="gridMenuTitleTwo">
-                <h2 class="menuFontTitleTwo">DRINKS</h2>
-                <hr>
-            </div>
-            <div class="menuListDrinks" id="menuListDrinks">
-            </div>
-        </section>
-        <section class="BGCheckered"></section>
-        <section class="BGInfo">
-            <div class="infoTitle">
-                SPECIALS
-            </div>
-            <div class="infoImage">
-            </div>
-            <div class="infoTextTitle">
-                Tuesday Student Special
-                <p>Indulge in a delicious Tuesday treat at John Henry's Pizza with our exclusive Student special! Elevate your pizza experience with our online-exclusive offer that allows customers to enjoy a stunning 25% off on our specially curated Pizza of the Week. This tempting deal is tailor-made for students seeking a delightful break without putting a strain on their wallets. Simply visit our website, select the Pizza of the Week, and apply the promo code at checkout to savour the irresistible flavours without breaking the bank. Join us online every Tuesday to try out our unbeatable variety of pizzas.</p>
-            </div>
-            <div class="infoTextTitleTwo">
-                Dessert PIZZA
-                <p>Open your mind to the next level of pizza magic at John Henry’s Pizza. Introducing our irresistible Dessert Pizza! Our dessert pizza is a culinary delight that transcends the boundaries between savoury and sweet. This online exclusive pizza has all the workings of a 5 star dessert. Including chocolate sauce, marshmallows, strawberries and chocolate buttons all on top of our signature Italian base. Whether you're celebrating a special occasion or simply treating yourself, our dessert pizza is the perfect finale to your pizza feast.</p>
-            </div>
-            <div class="infoImageTwo">
-                
-            </div>
-        </section>
-        <section class="BGReview"></section>
-        <section class="BGFooter"></section>
+        </div>
+        <div class="gridMenuTitle">
+            <h2 class="menuFontTitle">PIZZA</h2>
+            <hr>
+        </div>
+        <div class="gridMenuCartBtn">
+            <button id="orderBtn" class="cartButton"></button>
+            <hr>
+        </div>
+        <div class="menuList" id="menuList">
+        </div>
+        <div class="menuPhoto"></div>
+        <div class="gridMenuTitleTwo">
+            <h2 class="menuFontTitleTwo">DRINKS</h2>
+            <hr>
+        </div>
+        <div class="menuListDrinks" id="menuListDrinks">
+        </div>
+    </section>
+    <section class="BGCheckered"></section>
+    <section class="BGInfo">
+        <div class="infoTitle">
+            SPECIALS
+        </div>
+        <div class="infoImage">
+        </div>
+        <div class="infoTextTitle">
+            Tuesday Student Special
+            <p>Indulge in a delicious Tuesday treat at John Henry's Pizza with our exclusive Student special! Elevate
+                your pizza experience with our online-exclusive offer that allows customers to enjoy a stunning 25% off
+                on our specially curated Pizza of the Week. This tempting deal is tailor-made for students seeking a
+                delightful break without putting a strain on their wallets. Simply visit our website, select the Pizza
+                of the Week, and apply the promo code at checkout to savour the irresistible flavours without breaking
+                the bank. Join us online every Tuesday to try out our unbeatable variety of pizzas.</p>
+        </div>
+        <div class="infoTextTitleTwo">
+            Dessert PIZZA
+            <p>Open your mind to the next level of pizza magic at John Henry’s Pizza. Introducing our irresistible
+                Dessert Pizza! Our dessert pizza is a culinary delight that transcends the boundaries between savoury
+                and sweet. This online exclusive pizza has all the workings of a 5 star dessert. Including chocolate
+                sauce, marshmallows, strawberries and chocolate buttons all on top of our signature Italian base.
+                Whether you're celebrating a special occasion or simply treating yourself, our dessert pizza is the
+                perfect finale to your pizza feast.</p>
+        </div>
+        <div class="infoImageTwo">
+
+        </div>
+    </section>
+    <section class="BGReview"></section>
+    <section class="BGFooter"></section>
 </body>
 
 <script src="../JS/script.js"></script>
